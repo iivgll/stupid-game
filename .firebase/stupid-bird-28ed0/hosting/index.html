@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="Try to reach 100 points :D">
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="flappy_bird_game">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <title>Stupid Bird</title>
+    <link rel="manifest" href="manifest.json">
+
+    <style>
+        #loading {
+            background: url('assets/images/loading.png') no-repeat center center fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+        }
+    </style>
+
+    <script>
+        // The value below is injected by flutter build, do not touch.
+        const serviceWorkerVersion = "800015433";
+    </script>
+    <script src="flutter.js" defer></script>
+</head>
+<body>
+<div id="loading"></div>
+<script>
+    window.addEventListener('load', function() {
+        // Download main.dart.js
+        _flutter.loader.loadEntrypoint({
+            serviceWorker: {
+                serviceWorkerVersion: serviceWorkerVersion,
+            },
+            onEntrypointLoaded: function(engineInitializer) {
+                engineInitializer.initializeEngine().then(function(appRunner) {
+                    appRunner.runApp();
+                    document.getElementById('loading').style.display = 'none'; // Hide the loading div after the app is initialized
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>
