@@ -1,5 +1,8 @@
+import 'dart:developer';
+
 import 'package:flappy_bird_game/game/assets.dart';
 import 'package:flappy_bird_game/game/flappy_bird_game.dart';
+import 'package:flappy_bird_game/services/log_in_firebase.dart';
 import 'package:flutter/material.dart';
 
 class MainMenuScreen extends StatelessWidget {
@@ -20,6 +23,7 @@ class MainMenuScreen extends StatelessWidget {
         onTap: () {
           game.overlays.remove('mainMenu');
           game.resumeEngine();
+          ServiceLog.sendAnalyticsEvent('start_game', {});
         },
         child: Container(
           width: double.infinity,

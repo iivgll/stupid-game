@@ -15,6 +15,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   flame: ^1.10.0
   flame_audio: ^2.1.2
+  google_fonts: ^6.2.1
+  firebase_core: ^2.24.0
+  firebase_analytics: ^10.7.2
 
 dev_dependencies:
   flutter_test:

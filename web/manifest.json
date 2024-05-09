@@ -1,11 +1,11 @@
 {
-    "name": "flappy_bird_game",
-    "short_name": "flappy_bird_game",
+    "name": "Stupid Bird",
+    "short_name": "Stupid Bird",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Try to reach 100 points :D",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
